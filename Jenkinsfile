@@ -26,6 +26,7 @@ pipeline{
         archiveArtifacts artifacts:'factorial.jar'
       }
     }
+  }
     post{
       success{
         echo 'Build,test,run and JAR action successfuk and artifact ready'
@@ -34,7 +35,7 @@ pipeline{
     failure{
       echo 'build failed'
     }
-  }
+  
 }
 
     
