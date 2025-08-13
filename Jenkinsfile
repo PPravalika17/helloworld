@@ -3,7 +3,7 @@ pipeline{
   stages{
     stage('compute'){
       steps{
-        bat 'javac factorial.java TestFactorial.java'
+        bat 'javac Factorial.java TestFactorial.java'
       }
     }
     stage('Test'){
@@ -13,17 +13,17 @@ pipeline{
     }
     stage('Run'){
       steps{
-        bat 'java factorial.java'
+        bat 'java Factorial.java'
       }
     }
     stage('Package JAR'){
       steps{
-        bat 'jar cfm factorial.jar manifest.txt factorial.class'
+        bat 'jar cfm Factorial.jar manifest.txt Factorial.class'
       }
     }
     stage('Archive JAR'){
       steps{
-        archiveArtifacts artifacts:'factorial.jar'
+        archiveArtifacts artifacts:'Factorial.jar'
       }
     }
   }
