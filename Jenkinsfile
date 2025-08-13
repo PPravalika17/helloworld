@@ -31,11 +31,11 @@ pipeline{
       success{
         echo 'Build,test,run and JAR action successfuk and artifact ready'
       }
-    }
+    
     failure{
       echo 'build failed'
     }
-  
+    }
 }
 
     
